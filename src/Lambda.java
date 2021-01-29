@@ -9,8 +9,13 @@ public class Lambda {
      * @return lambda expression.
      */
     public static BiFunction<Double, Double, Double> getMax() {
-        // TODO replace null with lambda expression
-        return null;
+        return ((aDouble, aDouble2) -> {
+            if (aDouble > aDouble2) {
+                return aDouble;
+            } else {
+                return aDouble2;
+            }
+        });
     }
 
     /**
@@ -19,7 +24,8 @@ public class Lambda {
      * @return lambda expression.
      */
     public static Function<Double, Double> getSqrt() {
-        // TODO replace null with method reference
-        return null;
+        return (aDouble -> {
+            return Math.sqrt(aDouble);
+        });
     }
 }
